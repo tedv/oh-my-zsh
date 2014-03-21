@@ -146,7 +146,7 @@ TRAPWINCH () {
     setup_prompt
     zle reset-prompt
 }
-[[ 'cygwin' == ${OSTYPE} && 'xterm' == ${TERM} ]] && {    
+[[ 'cygwin' == ${OSTYPE} && 'xterm' == ${TERM} ]] && {
     unset -f TRAPWINCH
 }
 
@@ -182,4 +182,4 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{%B%F{cyan}%}✭"
 
 PROMPT='%{%F{${PD[default_color]}}%B%K{black}%}%~ ${PD[path_load_spacing]}${PD[load]}%E%{%f%k%b%}
 %{%B%F{white}%}[%{%F{cyan}%}%D{%H:%M}%{%F{white}%}] %{%F{${PD[default_color]}}%}%#%{%f%k%b%} '
-RPROMPT='$(git_prompt_ahead)$(git_prompt_status) $(git_prompt_info)%{%f%k%b%}'
+RPROMPT='$(git_prompt_info)%{%f%k%b%}'
